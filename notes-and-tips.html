@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lesson Exemplar</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/fontawesome.min.css">
+	<link rel="stylesheet" href="css/regular.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+	<!-- NAVIGATION -->
+	<nav class="navbar navbar-expand navbar-dark bg-primary">
+	  <div class="container">
+		  	<div class="w-100">
+				<h3 class="text-center text-white">Lesson Exemplar</h3>
+			</div>
+			<!-- <a class="navbar-brand" href="#">DC Circuits Via the 7E Learning Model</a> -->
+	  </div>
+	</nav>
+
+	<div class="container">
+		
+        <div class="row">
+            <div class="col-12">
+                <div class="card mt-3">
+                    <div class="card-body">
+                        <ul>
+                        <li>The set of activities are generally designed for senior high school students of the STEM strand regardless of the type of school management (private,
+                        public, regular and science). However, you are free to modify the activities which you think that are appropriate for your students.
+                        
+                        <li>The activities can be given as desired whether as a laboratory activity, take-home learning module, teacher-assisted module, etc. for as long as the 7 phases
+                        or stages are accomplished according to the sequence of the activities provided.
+                        <li>Make sure that the computer units are pre-installed with the required software to run the simulation. Test the computers and simulations before letting the
+                        students perform the set of activities.
+                        <li>A lesson exemplar is provided as your reference or guide. The content standards and competencies are all taken from the teaching guide for general
+                        physics 2 for senior high schools.
+                        <li>Make sure that each of your student possesses the basic computer skills (internet and email, computers, word processing, graphics and multimedia, and
+                        spreadsheets). If not, it is necessary for you to teach them these basic skills as part of the pre-discussion.
+                        <li>You may print the data and observation sheets for distribution to your students. However, another option is for your students to download the sheets in
+                        MS word format in which they can directly encode their answers then send these to your email. Just make sure to instruct the students on the method of
+                        submitting the activity sheets prior to the start of the first phase.
+                        <li class="mb-0">For concerns and clarifications, please feel free to contact the author:
+                        <p>Email: jovalson@gmail.com 
+                        </ul>
+                        <button class="btn btn-lg btn-primary btn-done text-white rounded float-right" id="done">Done</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+	</div>
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script>
+        $(document).ready(function() {
+			
+			$("#done").click(function(){
+				curSession = sessionStart();
+				curSession.teachers[1].isDone = true;
+				//curSession.teachers[1].url = 'notes-and-tips.html';
+				set(curSession);
+				window.location = 'index.html';
+			});
+		});
+    </script>
+</body>
+</html>

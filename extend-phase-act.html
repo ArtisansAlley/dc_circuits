@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Extend Phase</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/regular.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-expand navbar-dark bg-primary">
+        <div class="container">
+            <div class="w-100">
+                <h3 class="text-center text-white font-weight-bold">Extend Phase</h3>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row my-5">
+            <div class="col-12">
+                <!-- Container with card -->
+                <div class="card">
+                    <div class="card-body">
+                        <p class="text-center font-weight-bold">Activity Sheet <br>
+                            Solving Series-Parallel Combination Using Matrix</p>
+                            <p class="text-left my-0">
+                                Name of Members:____________________________________________________________________________________________________________________________________________
+                            </p>
+                            <p class="float-left my-0">
+                            Section:_______________
+                            </p>
+                            <p class="text-right my-0">
+                                Date:_______________
+                                </p>
+                            <p class="mt-4"></p>
+                            <b>I. </b> Circuit Diagram
+                            </p>
+                            <div class="divider-wide"></div>
+                            <p class="my-0">
+                                <b>II. </b> Solution
+                            </p>
+                                <div class="divider-wide"></div>
+                            <button class="btn btn-lg btn-primary btn-done text-white float-right mt-5" id="done">Done</button>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script>
+		$(document).ready(function() {
+			$("#done").click(function(){
+				curSession = sessionStart();
+				curSession.students[11].isDone = true;
+				//curSession.students[12].url = 'extend-phase.html';
+				set(curSession);
+				window.location = 'index.html';
+			});
+		})
+	</script>
+</body>
+</html>

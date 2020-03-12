@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Explain Phase ()</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/regular.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div class="popup">
+        <div class="container">
+            <div class="popup-text">
+                <p>Based on the previous Explore Phase, do this activity.</p>
+                <button class="btn btn-done btn-primary-light float-right popup-continue">CONTINUE</button>
+            </div>
+            <img class="popup-img img-fluid" src="img/mascot.gif">
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-expand navbar-dark bg-primary">
+        <div class="container">
+            <div class="w-100">
+                <h3 class="text-center text-white font-weight-bold">Explain Phase (1)</h3>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row my-5">
+            <div class="col-12">
+                <!-- Container with card -->
+                <div class="card">
+                    <div class="card-body">
+                        <p class="text-center font-weight-bold">Activity 3.1 Making Circuit Diagrams <br>
+                            Data and Observation Sheet</p>
+                            <p class="float-left my-0">
+                                Name:_____________________
+                            </p>
+                            <p class="text-right my-3">
+                            Group No:_______________
+                            </p>
+                            <p class="my-0"></p>
+                                <b>I. </b> Draw the different symbols used for the following circuit elements:
+                            </p>
+                            <div class= "col-8" style="margin: auto;">
+                            <table class="table table-bordered height='150'" style="table-layout: fixed;">
+                                <tr>
+                                    <td height="150">Battery (indicate the + and <br>negative terminal) </td>
+                                    <td height="150">Resistor</td>
+                                    <td height="150">Fuse</td>
+                                </tr>
+                                <tr>
+                                    <td height="150">Bulb</td >
+                                    <td height="150">Wire</td>
+                                    <td height="150">Switch</td>
+                                </tr>
+                            </table>
+                        </div>
+                            <p class="my-0"></p>
+                            <b>II. </b> Draw the schematic diagram of the final circuit you have created. Use the correct symbols and labels in diagram.
+                            </p>
+                            <p class="my-5"></p>
+                            <b>III. </b>  Explain. Answer the following questions:
+                                <ol class="font-weight:bold">
+                                    <li class="mb-5"> What is the direction of the electron flow with respect to the terminals of the battery when the switch is on? </li>
+                                    <li class="mb-5"> What is the direction of conventional current with respect to the terminals of the battery when the switch is on? </li>
+                                    <li class="mb-5">What happens to the electrons when the resistance of the light bulb is set to zero ohm? </li>
+                                    <li class="mb-5">What happens to the brightness of the bulb as you slowly increase its resistance? </li>
+                                    <li class="mb-5">What happens to the brightness of the bulb as you slowly increase its resistance? </li>
+                                </ol>
+                            </p>
+                            <button class="btn btn-lg btn-primary btn-done text-white float-right" id="done">Done</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script>
+		$(document).ready(function() {
+			$("#done").click(function(){
+				curSession = sessionStart();
+				curSession.students[3].isDone = true;
+				curSession.students[4].url = 'explore-phase(2).html';
+				set(curSession);
+				window.location = 'index.html';
+			});
+		})
+	</script>
+</body>
+</html>

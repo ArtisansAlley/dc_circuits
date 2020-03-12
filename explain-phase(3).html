@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Explain Phase (3)</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/regular.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div class="popup">
+        <div class="container">
+            <div class="popup-text">
+                <p>Based on the previous Explore Phase, do this activity.</p>
+                <button class="btn btn-done btn-primary-light float-right popup-continue">CONTINUE</button>
+            </div>
+            <img class="popup-img img-fluid" src="img/mascot.gif">
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-expand navbar-dark bg-primary">
+        <div class="container">
+            <div class="w-100">
+                <h3 class="text-center text-white font-weight-bold">Explain Phase (3)</h3>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row my-5">
+            <div class="col-12">
+                <!-- Container with card -->
+                <div class="card">
+                    <div class="card-body">
+                        <p class="text-center font-weight-bold">Activity 3.3. Series-Parallel Connection <br>
+                            Data and Observation Sheet </p>
+                            <p class="text-left my-0">
+                                Name:_____________________
+                            </p>
+                            <p class="text-right my-0">
+                            Group No:_______________
+                            </p>
+                            <p class="my-0"></p>
+                            <b>I. </b>      Circuit Diagrams
+                            </p>
+                            <div class= "col-11" style="margin: auto;">
+                            <table class="table" style="table-layout: fixed;">
+                                <tr class="text-center">
+                                    <td height="250">Figure 1</td>
+                                    <td height="250">Figure 2</td>
+                                    <td height="250">Figure 3</td>
+                                </tr>
+                            </table>
+                        </div>
+                            <p class="my-0"></p>
+                            <b>II. </b>     Complete the table below.
+                            </p>
+                            <img src="./img/explain-phase3-table.jpg" class="mx-auto d-block">
+                            <p class="my-0"></p>
+                            <b>III. </b>	Solutions. Please show your solutions for the following computations:<br>R for R1-R2,R for R3-R4, equivalent R (R1-R2//R3-R4), V for R1-R2, V for R3-R4,equivalent V (R1-R2//R3-R4), I (current) for R1-R2, I (current) for R3-R4andequivalent I (R1-R2//R3-R4)
+                            </p>
+                            <p class="my-0"></p>
+                            <b>IV. </b>   Explain. Answer the following questions:
+                                <ol>
+                                    <li class="mb-5"> In the analysis of series-parallel combination, what strategy (steps) can you outline in computing for the individual or equivalent resistance, voltage and
+                                        current? 
+                                    </li>
+                                    <li class="mb-5">
+                                        Given the circuit below, apply the strategy you formulated in computing for the equivalent resistance, equivalent current, current through each resistor and voltage across each resistor. Draw the simplified circuits and show complete solution.
+                                    <img src="./img/explain-phase3.jpg" class="mx-auto d-block">
+                                    </li>
+                                </ol>
+                            </p>
+                            <button class="btn btn-lg btn-primary btn-done text-white float-right mt-5" id="done">Done</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script>
+		$(document).ready(function() {
+			$("#done").click(function(){
+				curSession = sessionStart();
+				curSession.students[7].isDone = true;
+				curSession.students[8].url = 'explore-phase(4).html';
+				set(curSession);
+				window.location = 'index.html';
+			});
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Explore Phase(3)</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/regular.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div class="popup">
+        <div class="container">
+            <div class="popup-text">
+                <p>At the end of this activity, you are expected to describe the process in computing for the equivalent resistance, current and voltage in combinations of series
+                            and parallel connections. </p>
+                <button class="btn btn-done btn-primary-light float-right popup-continue">CONTINUE</button>
+            </div>
+            <img class="popup-img img-fluid" src="img/mascot.gif">
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-expand navbar-dark bg-primary">
+        <div class="container">
+            <div class="w-100">
+                <h3 class="text-center text-white font-weight-bold">Explore Phase(3)</h3>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row my-5">
+            <div class="col-12">
+                <!-- Container with card -->
+                <div class="card">
+                    <div class="card-body">
+                        <p class="text-center font-weight-bold">Activity 3.3. Series and Parallel Connections</p>
+                        <!-- <p class="mt-5 mb-0">At the end of this activity, you are expected to describe the process in computing for the equivalent resistance, current and voltage in combinations of series
+                            and parallel connections.  </p> -->
+                            <img src="img/explore-3.png" class="float-right w-25 h-25">
+                        <p class="my-0">
+                            <b>1. </b> Refresh the simulation page to have a new working space then plot the circuit diagram below. Letters a and b are considered nodes.
+                            <img src="./img/explore-phase-3.jpg" class="mx-auto d-block">
+                        </p>
+                        <p class="my-0">
+                            The circuit presented is a combination of series and parallel connection. It contains 3 branches, one for the location of the battery, another branch for the 4Ω
+and 10Ω resistor and the last branch for the 20Ω and 15Ω resistor. The 4Ω and 10Ω resistors are in series with one another. When combined, the equivalent
+resistance for these two resistors are in parallel with the equivalent resistance of the 20Ω and 15Ω resistors which are also connected in series. 
+                        </p>
+                        <p class="my-0">
+                            <b>2. </b> Draw the circuit diagram in the data and observation sheet as Figure 1. Use the correct symbols. Label the 4Ω, 10Ω, 20Ω, and 15Ω resistors as R1, R2, R3
+                            and R4 respectively
+                        </p>
+                        <p class="my-0">
+                            <b>3. </b>  In the data and observation sheet, make a simplified circuit diagram (Figure 2) combining resistors R1 and R2. Label the combined resistors in series as R1 -
+                            R2. Do the same for resistors R3 and R4.
+                        </p>
+                        <p class="my-0">
+                            <b>4. </b> Compute the equivalent resistance of the combined resistors (R1 - R2) using the equation you derived for series connection in the previous activity. Show
+                            your solution in the data and observation sheet.
+                        </p>
+                        <p class="my-0">
+                            <b>5. </b> Compute the equivalent voltage and equivalent current of the combined resistors (R1 - R2) using the equations you have derived in the previous activity.
+                            Show your solution in the data and observation sheet.
+                        </p>
+                        <p class="my-0">
+                            <b>6. </b>The diagram you made in procedure 3 can still be further simplified since the combined R1 and R2 resistors are in parallel with R3 and R4. As such,
+                            combine all the resistors to attain the simplest diagram (Figure 3) of which the current flows only around one rectangular loop. Use the label R1-R2//R3-R4
+                            for all the combined resistors since R1 and R2 is parallel with R3 and R4, Draw the circuit in the data and observation sheet.
+                        </p>
+                        <p class="my-0">
+                            <b>7. </b>Compute the equivalent resistance of the combined resistors (R1-R2//R3-R4) using the equation you derived for parallel connection in the previous
+                            activity. Show your solution in the data and observation sheet. 
+                        </p>
+                        <p class="my-0">
+                            <b>8. </b>Compute the equivalent voltage and equivalent current across the combined resistors (R1-R2//R3-R4) using the equations you derived for parallel
+                            connection in the previous activity. Show your solution in the data and observation sheet.
+                        </p>
+                        <p class="my-0">
+                            <b>9. </b> Verify your computations by measuring the current and resistance using the voltmeter and non-contact ammeter. Do this with each of the resistor and the
+                            combined resistors. List these values in the data and observation sheet (Table 1) under the column “meas” which means measured. 
+                        </p>
+                        <p class="my-0">
+                            <b>10. </b> Proceed to the next phase then accomplish the data and observation sheet. 
+                        </p>
+                        <button class="btn btn-lg btn-primary btn-done text-white float-right mt-5" id="done">Done</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#done").click(function () {
+                curSession = sessionStart();
+                curSession.students[6].isDone = true;
+                curSession.students[7].url = 'explain-phase(3).html';
+                set(curSession);
+                window.location = 'index.html';
+            });
+        })
+    </script>
+</body>
+
+</html>

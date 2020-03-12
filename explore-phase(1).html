@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Explore Phase(1)</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/regular.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div class="popup">
+        <div class="container">
+            <div class="popup-text">
+                <p>At the end of this activity, you are expected to be able to determine the different circuit elements and illustrate circuit diagrams with power sources (cell or battery), switches, light bulbs, resistors (fixed) fuses, ammeters and voltmeters. </p>
+                <button class="btn btn-done btn-primary-light float-right popup-continue">CONTINUE</button>
+            </div>
+            <img class="popup-img img-fluid" src="img/mascot.gif">
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-expand navbar-dark bg-primary">
+        <div class="container">
+            <div class="w-100">
+                <h3 class="text-center text-white font-weight-bold">Explore Phase(1)</h3>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row my-5">
+            <div class="col-12">
+                <!-- Container with card -->
+                <div class="card">
+                    <div class="card-body">
+                        <p class="text-center font-weight-bold">Activity 3.1 Making Circuit Diagrams</p>
+                        <!-- <p class="mt-5 mb-0">At the end of this activity, you are expected to be able to determine the different circuit elements and illustrate circuit diagrams with power sources (cell or
+                            battery), switches, light bulbs, resistors (fixed) fuses, ammeters and voltmeters. </p> -->
+                        <p class="my-0">Procedure:</p>
+                        <img src="img/explore.png" class="float-right w-25 h-25">
+                        <p class="my-0">
+                            <b>1. </b>Make a simple circuit consisting of a 12V battery, a switch, a light bulb of zero resistance and wires. The circuit should form a rectangular loop. Close the
+                            switch (switch on) then observe the flow of electrons around the circuit (rectangular loop) and the direction of conventional current.
+                        </p>
+                        <p class="my-0">
+                            <b>2. </b>Change the bulb’s resistance to 6 ohms then observe what happens. You may further change instantaneously the resistance of the bulb and voltage of the
+                            battery for more observations.
+                        </p>
+                        <p class="my-0">
+                            <b>3. </b> Set the voltage of the battery to 12V and the bulb resistance to 6 ohms. Disconnect the circuit by clicking one of the nodes (scissor symbol) before the
+                            light bulb.
+                        </p>
+                        <p class="my-0">
+                            <b>4. </b>In the disconnected node/junction, connect two (2) resistors of different resistance (8 ohms and 10 ohms) end-to-end to form a single path for the
+                            electrons to flow. Observe what will happen to the light bulbs and the flow of electrons as you close (switch on) the switch.
+                        </p>
+                        <p class="my-0">
+                            <b>5. </b>Click on the battery schematic button found at the lowest right side. This will show you the different symbols used for the different circuit elements.
+                            Familiarize yourself with these symbols including those symbols of elements that are not used
+                        </p>
+                        <p class="my-0">
+                            <b>6. </b>Proceed to the next phase then accomplish the data and observation sheet (Activity 3.)
+                        </p>
+                        </p>
+                        <button class="btn btn-lg btn-primary btn-done text-white float-right" id="done">Done</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#done").click(function () {
+                curSession = sessionStart();
+                curSession.students[2].isDone = true;
+                curSession.students[3].url = 'explain-phase(1).html';
+                set(curSession);
+                window.location = 'index.html';
+            });
+        })
+    </script>
+</body>
+
+</html>

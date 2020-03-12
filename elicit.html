@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Elicit</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/regular.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="popup">
+        <div class="container">
+            <div class="popup-text">
+                <p>At the end of this phase, you should be able to recall Ohm’s law and determine how are the circuit elements connected.</p>
+                <button class="btn btn-done btn-primary-light float-right popup-continue">CONTINUE</button>
+            </div>
+            <img class="popup-img img-fluid" src="img/mascot.gif">
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-expand navbar-dark bg-primary">
+        <div class="container">
+            <div class="w-100">
+                <h3 class="text-center text-white font-weight-bold">Elicit</h3>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <div class="row my-5">
+            <div class="col-12">
+                <!-- Container with card -->
+                <div class="card">
+                    <div class="card-body">
+                        <p class="text-center font-weight-bold">Activity 1. Ohm's Law and DC Circuits</p>
+                        <!-- <p class="mt-5 mb-0">At the end of this phase, you should be able to recall Ohm’s law and
+                            determine how are the circuit elements connected.</p> -->
+                        <p class="my-0">Procedure:</p>
+                        <img src="img/elicit.png" class="float-right w-25 h-25">
+                        <p class="my-0">
+                            <b>1. </b>Click the battery-resistor circuit simulation to download. If a pop-up message
+                            appears that the file may harm your computer, just click on the “keep”
+                            button. Click the executable jar file to open the simulation in a separate window. Observe
+                            how are the battery, resistor, ammeter and battery connected.
+                        </p>
+                        
+                        <p class="my-0">
+                            <b>2. </b> Take note of the movement of electrons within the circuit.
+                        </p>
+                        <p class="my-0">
+                            <b>3. </b>Vary the amount of voltage by moving the glider located at the control panel
+                            (right side). Observe what happens to the electrons, the amount of current
+                            and the polarity of the battery. Write down your observations in your log.
+                        </p>
+                        <p class="my-0">
+                            <b>4. </b>Keep the voltage constant at your own desired amount. Predict what will happen to
+                            the current as you increase and decrease the resistance of the resistor.
+                            Write down your observations after verifying your prediction.
+                        </p>
+                        <p class="my-0">
+                            <b>5. </b>Tick/click the box for “show voltage calculation”. This will show you how a
+                            voltmeter is used to measure the voltage across the different circuit elements.
+                            Write down your observation.
+                        </p>
+                        <p class="my-0">
+                            <b>6. </b>Close the simulation then briefly discuss your observations with your assigned
+                            group.
+                        </p>
+                        <p class="my-0">
+                            <b>7. </b>Discuss also with your group the possible answers to the following questions: <br>
+                            <p class="ml-3">
+                                <b>a. </b>What makes a parallel connection different from a series connection? <br>
+                                <b>b. </b>What do you think will happen to the individual and total voltage, current,
+                                and resistance if the circuit elements are to be connected in series or in
+                                parallel? <br>
+                                <b>c. </b>How are you going to determine or solve the individual and equivalent voltage,
+                                current, and resistance if the circuit elements are connected in
+                                combination of series and parallel?
+                            </p>
+                        </p>
+                        <p class="my-0">
+                            <b>8. </b>Proceed only to the engage phase once you are done with the discussion.
+                        </p>
+                        <p class="my-0"><a href="files/battery-resistor-circuit_en.jar" >Battery-Resistor Circuit Simulation</a></p>     
+                        <button class="btn btn-lg btn-primary btn-done text-white float-right" id="done">Done</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            
+
+            $("#done").click(function () {
+                curSession = sessionStart();
+                curSession.students[0].isDone = true;
+                curSession.students[1].url = 'engage.html';
+                set(curSession);
+                window.location = 'index.html';
+            });
+        })
+    </script>
+</body>
+
+</html>

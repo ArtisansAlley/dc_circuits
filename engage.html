@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Engage</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/regular.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+        
+    <div class="popup">
+        <div class="container">
+            <div class="popup-text">
+                <p>At the end of this phase, you are expected to be accustomed in using the DC circuit simulation kit. </p>
+                <button class="btn btn-done btn-primary-light float-right popup-continue">CONTINUE</button>
+            </div>
+            <img class="popup-img img-fluid" src="img/mascot.gif">
+        </div>
+    </div>
+
+
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-expand navbar-dark bg-primary">
+        <div class="container">
+            <div class="w-100">
+                <h3 class="text-center text-white font-weight-bold">Engage</h3>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row my-5">
+            <div class="col-12">
+                <!-- Container with card -->
+                <div class="card">
+                    <div class="card-body">
+                        <p class="text-center font-weight-bold">Activity 2. Introduction to DC Circuit Simulation Kit
+                        </p>
+                        <!-- <p class="mt-5 mb-0">At the end of this phase, you are expected to be accustomed in using the DC
+                            circuit simulation kit. </p> -->
+                        <p class="my-0">Procedure:</p>
+                        <img src="img/engage.png" class="float-right w-25 h-25">
+                        <p class="my-0">
+                            <b>1. </b>Click the Circuit Construction Kit-DC to open in a separate window. Choose the
+                            “lab” icon to load the simulation.
+                        </p>
+                        <p class="my-0">
+                            <b>2. </b>Acquiant yourself with the different circuit elements found at the left control
+                            panel. On the opposite side, the right control panel includes the option for
+                            current direction, flow of electrons, values, labels, voltmeter, ammeter, battery
+                            resistance, wire resistivity and type of view (lifelike or schematic).
+                        </p>
+                        <p class="my-0">
+                            <b>3. </b>Discover how to use the different circuit elements, change the different
+                            quantities (voltage and resistance) and use the volmeter and ammeter.
+                        </p>
+                        <p class="my-0">
+                            <b>4. </b>Click refresh (lower right button) then proceed to the explore phase for the next
+                            activity.
+                        </p>
+                        <p class="my-4"><a href="circuit-construction-kit-dc_en.html" target="_new">Circuit Construction Kit-DC</a></p>
+                        <button class="btn btn-lg btn-primary btn-done text-white float-right" id="done">Done</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script>
+		$(document).ready(function() {
+			$("#done").click(function(){
+				curSession = sessionStart();
+				curSession.students[1].isDone = true;
+				curSession.students[2].url = 'explore-phase(1).html';
+				set(curSession);
+				window.location = 'index.html';
+			});
+		})
+	</script>
+</body>
+
+</html>

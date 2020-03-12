@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Explore Phase(2)</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/regular.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div class="popup">
+        <div class="container">
+            <div class="popup-text">
+                <p>At the end of this activity, you are expected to distinguish series circuit from parallel circuit connection and determine the equivalent resistance, current, and
+                            voltage in a given network of resistors.</p>
+                <button class="btn btn-done btn-primary-light float-right popup-continue">CONTINUE</button>
+            </div>
+            <img class="popup-img img-fluid" src="img/mascot.gif">
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-expand navbar-dark bg-primary">
+        <div class="container">
+            <div class="w-100">
+                <h3 class="text-center text-white font-weight-bold">Explore Phase(2)</h3>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row my-5">
+            <div class="col-12">
+                <!-- Container with card -->
+                <div class="card">
+                    <div class="card-body">
+                        <p class="text-center font-weight-bold">Activity 3.2. Series and Parallel Circuits</p>
+                        <!-- <p class="mt-5 mb-0">At the end of this activity, you are expected to distinguish series circuit from parallel circuit connection and determine the equivalent resistance, current, and
+                            voltage in a given network of resistors.</p> -->
+                            <img src="img/explore-2.png" class="float-right w-25 h-25">
+                        <p class="my-0">
+                            <b>1. </b> Using the previously constructed circuit diagram (series connection) in activity 3.1, measure the amount voltage across the battery, across each of the two
+                            resistors and across the bulb using the voltmeter found at the right panel. Drag and drop the voltmeter in the working area then simply touch the negative
+                            and positive test probes (leads) to any two points in the circuit. The switch must always be on during this process. If a negative voltage is displayed, the
+                            probes are simply interchanged which can be corrected by switching the red and black test probes. List down the values in the data and observation sheet.
+                            Take note that the voltage supplied by the battery is the total voltage. List down the values in the data and observation sheet (Table 1).
+                        </p>
+                        <p class="my-0">
+                            <b>2. </b> After measuring the voltages, return the voltmeter to the right panel using the drag and drop process. 
+                        </p>
+                        <p class="my-0">
+                            <b>3. </b>Measure the current supplied by the battery, current passing through the resistors and the bulb using the ammeter. Remember that the ammeter must
+                            become part of the circuit to obtain a reading. However, the simulation provides you the option to use the non-contact ammeter. For this activity, please use
+                            the contact ammeter, the one with connecting ends or leads. Disconnect or split the circuit in the positive end of the battery then insert the ammeter. Do the
+                            same for the bulb and the two resistors to get the current reading through these. In total, there must be four (4) ammeters in the circuit. Compare the
+                            equivalent current (battery’s current) with that of the individual currents through the resistors and the bulb. List down the values in the data and observation
+                            sheet (Table 1). 
+                        </p>
+                        <p class="my-0">
+                            <b>4. </b>After taking all measurements, refresh the simulation page to start a new working space. Using the same circuit elements (12V battery with no battery
+                            resistance, a switch, a bulb of 6-ohm resistance, an 8-ohm resistor and a 10-ohm resistor), make a parallel circuit. Each of the resistor, the battery and the
+                            bulb should be in separate branches. All components should be connected between the same set of electrically common points called nodes. For this part,
+                            you may discuss with your groupmates on how to come up with a parallel circuit. 
+                        </p>
+                        <p class="my-0">
+                            <b>5. </b> Measure the voltage across the battery, across the bulb and across the two resistors. List down the values in the data and observation sheet (Table 2). 
+                        </p>
+                        <p class="my-0">
+                            <b>6. </b> Measure the current through the battery (equivalent or total current), current through the resistors and current through the bulb using either the noncontact or contact ammeter. List down the values in the data and observation sheet (Table 2). 
+                        </p>
+                        <p class="my-0">
+                            <b>7. </b>  Proceed to the next phase then accomplish the data and observation sheet.
+                        </p>
+                        <button class="btn btn-lg btn-primary btn-done text-white float-right" id="done">Done</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#done").click(function () {
+                curSession = sessionStart();
+                curSession.students[4].isDone = true;
+                curSession.students[5].url = 'explain-phase(2).html';
+                set(curSession);
+                window.location = 'index.html';
+            });
+        })
+    </script>
+</body>
+
+</html>

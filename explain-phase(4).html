@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Explain Phase (4)</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/regular.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div class="popup">
+        <div class="container">
+            <div class="popup-text">
+                <p>Based on the previous Explore Phase, do this activity.</p>
+                <button class="btn btn-done btn-primary-light float-right popup-continue">CONTINUE</button>
+            </div>
+            <img class="popup-img img-fluid" src="img/mascot.gif">
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-expand navbar-dark bg-primary">
+        <div class="container">
+            <div class="w-100">
+                <h3 class="text-center text-white font-weight-bold">Explain Phase (4)</h3>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row my-5">
+            <div class="col-12">
+                <!-- Container with card -->
+                <div class="card">
+                    <div class="card-body">
+                        <p class="text-center font-weight-bold">Activity 3.4. Kirchhoff’s Laws <br>
+                            Data and Observation Sheet  </p>
+                            <p class="float-left my-0">
+                                Name:_____________________
+                            </p>
+                            <p class="text-right my-4">
+                            Group No:_______________
+                            </p>
+                            <p class="mb-5">
+                                <b>I. </b>       Circuit Diagram. Draw the circuit diagram with labels and values. Show also the identified arbitrary directions of the current in each branch and loop.
+                            </p>
+                            <p class="mb-5">
+                                <b>II. </b>.     Solutions. Show all your solutions including your computation for the average percentage error.
+                            </p>
+                            <p class="my-0">
+                                <b>III. </b>    Complete the table below.
+                            </p>
+                            <p>Table 1</p>
+                            <img src="./img/explain-phase4-table.jpg" class="mx-auto d-block">
+                            <p class="my-0"></p>
+                            <b>IV. </b>   Explain. Answer the following questions and problem.
+                                <ol>
+                                    <li class="mb-5">
+                                        Based on the activity you have performed, when is Kirchhoff’s laws applicable to use?
+                                    </li>
+                                    <li class="mb-5">
+                                        State Kirchhoff’s current law (KCL) then explain how it is used to solve for current in complex circuits. Derive your explanation from the procedures you
+                                        have performed.
+                                    </li>
+                                    <li class="mb-5">State Kirchhoff’s voltage law (KVL) then explain how it is used to solve for voltage in complex circuit. Derive your explanation from the procedures you
+                                        have performed.
+                                    </li>
+                                    <li class="mb-5">
+                                        Calculate the current in each branch and the voltage across each resistor of the circuit below. Use the same procedure you have learned in the explore phase to correctly analyze the circuit. Assign the arbitrary direction of currents and loops according to your preference. Show complete solution. Use additional sheets if necessary. You may use the simulation later to check your answers.
+                                        <img src="./img/explain-phase4.jpg" class="mx-auto d-block">
+                                    </li>
+                                </ol>
+                            </p>
+                            <button class="btn btn-lg btn-primary btn-done text-white float-right mt-5" id="done">Done</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#done").click(function () {
+                curSession = sessionStart();
+                curSession.students[9].isDone = true;
+                curSession.students[10].url = 'evaluation-phase.html';
+                set(curSession);
+                window.location = 'index.html';
+            });
+        })
+    </script>
+</body>
+
+</html>

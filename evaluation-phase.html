@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Evaluation Phase</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/regular.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-expand navbar-dark bg-primary">
+        <div class="container">
+            <div class="w-100">
+                <h3 class="text-center text-white font-weight-bold">Evaluation Phase</h3>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row my-5">
+            <div class="col-12">
+                <!-- Container with card -->
+                <div class="card">
+                    <div class="card-body">
+                        <p class="text-center font-weight-bold">
+                            Activity 4. Designing Complex Circuits<br>Activity Sheet
+                        </p>
+                        <p class="my-0 float-left">
+                            Name of Designer:_____________________
+                        </p>
+                        <p class="my-0 text-right">
+                            Date:_______________
+                        </p>
+                        <p class="float-left my-0">
+                            Name of Assigned Pair:_____________________
+                        </p>
+                        <p class="text-right my-0">
+                            Score:_______________
+                        </p>
+                        <p class="text-center font-weight-bold my-0">
+                            Circuit Diagram
+                        </p>
+                        <p class="text-center mb-5">
+                            (Draw your circuit here)
+                        </p>
+                        <div class="divider-wide"></div>
+                        <div class="row-10"></div>
+                        <p class="mb-4">
+                            Solve for the current in each branch and the voltage across each resistor of the circuit above (designed by your pair). Show your complete solution.
+                        </p>
+                        <button class="btn btn-lg btn-primary btn-done text-white float-right" id="done">Done</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script>
+		$(document).ready(function() {
+			$("#done").click(function(){
+				curSession = sessionStart();
+				curSession.students[10].isDone = true;
+				curSession.students[11].url = 'extend-phase.html';
+				set(curSession);
+				window.location = 'index.html';
+			});
+		})
+	</script>
+</body>
+</html>

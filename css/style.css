@@ -1,0 +1,89 @@
+#intro .modal-dialog{
+	max-width: 80% !important;
+}
+#intro .modal-content {
+	background: transparent !important;
+	border: transparent !important;
+	color: white;
+}
+.modal-backdrop {
+	background: gray;
+}
+.modal-backdrop.show {
+	opacity: 0.9;
+}
+
+a[href^="#"]  {
+	color: #6c757d !important; 
+}
+
+a[href^="#"]:hover  {
+	cursor: default;
+	text-decoration: none !important; 
+}
+
+.btn-primary,
+.bg-primary {
+	background-color: #c56136 !important;
+	border-color: #c56136 !important;
+}
+
+.btn-primary-light {
+	background: #e1682d;
+	border-color: #e1682d;
+	color: white;
+}
+
+.btn-done {
+	padding-left: 3%;
+	padding-right: 3%;
+	border-radius: 30px !important;
+}
+
+.text-primary {
+	color: #c56136 !important;
+}
+.list-group-item {
+	padding: .2rem;
+	border-color: transparent;
+}
+.list-group-item a{
+	color: inherit;
+}
+.card{
+	border-radius: 0 !important;
+	box-shadow: 0px 2px 5px -2px black !important;
+}
+.divider-wide{
+	height: 350px;
+}
+.divider-small{
+	height: 100px;
+}
+.popup {
+  background: rgba(128,128,128,0.9);
+  width: 100%;
+  padding: 100px;
+  position: fixed;
+  bottom: -1000px;
+  z-index: 1050;
+  
+  color: white;
+  font-weight:bolder;
+  font-size: 1.3rem;
+}
+.popup-text {
+  width: 60%;
+  position: absolute;
+  margin-left: 100px;
+  margin-top: 50px;
+  top:0;
+  left:0;
+  z-index: 1051
+}
+.popup-img {
+  position: absolute;
+  top: -120px;
+  left: 65%;
+  width: 35%;
+}
